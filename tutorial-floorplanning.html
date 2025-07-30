@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Floorplanning Basics | Backend VLSI Adventure</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Floorplanning Basics</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tutorials.html">Tutorials</a>
+    </nav>
+  </header>
+  <main>
+    <h2>What is Floorplanning?</h2>
+    <p>Floorplanning is the process of arranging different blocks of the chip before placement and routing. The goal is to optimize performance, power, and area (PPA).</p>
+    <h3>Key Steps</h3>
+    <ul>
+      <li>Define chip dimensions and aspect ratio.</li>
+      <li>Plan power grid (VDD & VSS straps).</li>
+      <li>Place macros and memory blocks.</li>
+      <li>Reserve routing channels and keep-out zones.</li>
+    </ul>
+    <h3>Example TCL Snippet</h3>
+    <pre>
+set_die_area {0 0 2000 2000}
+set_core_area {50 50 1950 1950}
+add_power_stripes -nets {VDD VSS} -layer metal5 -width 2
+    </pre>
+  </main>
+  <footer>
+    <p>&copy; 2025 Backend VLSI Adventure</p>
+  </footer>
+</body>
+</html>
